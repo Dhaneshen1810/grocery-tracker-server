@@ -3,12 +3,22 @@ import app from "./app";
 
 const fastify = Fastify({ logger: true });
 
-fastify.register(app);
+async function start() {
+  try {
+    await fastify.register(app);
 
-fastify.listen({ port: 3002 }, (err, address) => {
-  if (err) {
+    const port = Number(process.env.PORT) || 3000;
+
+    const address = await fastify.listen({
+      port,
+      host: "0.0.0.0",
+    });
+
+    fastify.log.info(`Server listening at ${address}`);
+  } catch (err) {
     fastify.log.error(err);
     process.exit(1);
   }
-  console.log(`Server listening at ${address}`);
-});
+}
+
+start();

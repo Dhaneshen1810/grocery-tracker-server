@@ -6,7 +6,6 @@ async function cronRoutes(fastify: FastifyInstance) {
     const groceryProvider = GroceryProvider(fastify);
 
     await groceryProvider.cleanUpItems();
-
     return { ok: true };
   });
 }
