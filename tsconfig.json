@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
-    "moduleDetection": "force",
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "strict": true,
-    "outDir": "dist"
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "rootDir": "."
   },
   "include": ["server.ts", "src/**/*.ts", "src/**/*.d.ts"]
 }
