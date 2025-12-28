@@ -95,7 +95,7 @@ export const GroceryProvider = (fastify: FastifyInstance) => {
         updateData.done = data.done;
       }
 
-      if (data.expiryDate !== undefined) {
+      if (data.expiryDate) {
         updateData.expiryDate = new Date(data.expiryDate);
       }
 

@@ -11,5 +11,5 @@ export interface GroceryItem {
 
 export interface GroceryItemInput {
   name: string;
-  expiryDate?: string;
+  expiryDate?: string | null;
 }
