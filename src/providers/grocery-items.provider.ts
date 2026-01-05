@@ -19,7 +19,6 @@ export const GroceryProvider = (fastify: FastifyInstance) => {
 
       const newItem: OptionalId<GroceryItem> = {
         name: data.name,
-        expiryDate: data.expiryDate ? new Date(data.expiryDate) : undefined,
         done: false,
         created_at: now,
         updated_at: now,
