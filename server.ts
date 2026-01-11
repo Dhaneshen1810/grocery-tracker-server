@@ -1,5 +1,6 @@
 import Fastify from "fastify";
 import app from "./app";
+import "./src/lib/push";
 
 const fastify = Fastify({ logger: true });
 
